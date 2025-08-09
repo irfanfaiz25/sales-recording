@@ -1,61 +1,333 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sales Recording System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📋 Deskripsi Sistem
 
-## About Laravel
+Sales Recording System adalah aplikasi web berbasis Laravel yang dirancang untuk mengelola pencatatan penjualan secara komprehensif. Sistem ini menyediakan dashboard analitik, manajemen transaksi penjualan, sistem pembayaran bertahap, dan manajemen data master dengan kontrol akses berbasis role.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### ✨ Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   **Dashboard Analitik** dengan widget dan chart interaktif
+-   **Manajemen Penjualan** dengan sistem multi-item per transaksi
+-   **Sistem Pembayaran Bertahap** dengan validasi otomatis
+-   **Manajemen Data Master** (Items & Users)
+-   **Role-Based Access Control** menggunakan Spatie Laravel Permission
+-   **Real-time Updates** dengan Livewire
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🏗️ Teknologi yang Digunakan
 
-## Learning Laravel
+-   **Backend**: Laravel 12.x
+-   **Frontend**: Livewire 3.x, Tailwind CSS 4.x
+-   **Database**: MySQL (dapat diganti dengan SQLite/PostgreSQL)
+-   **Charts**: Chart.js
+-   **Image Processing**: Intervention Image
+-   **Permissions**: Spatie Laravel Permission
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 👥 User Roles & Permissions
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🔐 Admin Role
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Akses Penuh ke Seluruh Sistem**
 
-## Laravel Sponsors
+| Modul     | Permissions                        |
+| --------- | ---------------------------------- |
+| Dashboard | ✅ View dashboard dengan analytics |
+| Users     | ✅ Create, Read, Update, Delete    |
+| Items     | ✅ Create, Read, Update, Delete    |
+| Sales     | ✅ Create, Read, Update, Delete    |
+| Payments  | ✅ Create, Read, Update, Delete    |
+| Reports   | ✅ View all reports                |
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🏪 Kasir Role
 
-### Premium Partners
+**Akses Terbatas untuk Operasional Harian**
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+| Modul     | Permissions                     |
+| --------- | ------------------------------- |
+| Dashboard | ❌ No access                    |
+| Users     | ❌ No access                    |
+| Items     | ✅ View items only              |
+| Sales     | ✅ Create, Read, Update, Delete |
+| Payments  | ✅ Create, Read, Update, Delete |
+| Reports   | ❌ No access                    |
 
-## Contributing
+### 👤 Default Users
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Username | Email             | Password | Role  |
+| -------- | ----------------- | -------- | ----- |
+| Admin    | admin@example.com | password | Admin |
+| Kasir    | kasir@example.com | password | Kasir |
 
-## Code of Conduct
+## 🚀 Petunjuk Instalasi
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Prerequisites
 
-## Security Vulnerabilities
+Pastikan sistem Anda memiliki:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   PHP >= 8.2
+-   Composer
+-   Node.js & NPM
+-   Git
 
-## License
+### 1. Clone Repository
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git clone https://github.com/irfanfaiz25/sales-recording.git
+cd sales-recording
+```
+
+### 2. Install Dependencies
+
+```bash
+# Install PHP dependencies
+composer install
+
+# Install Node.js dependencies
+npm install
+```
+
+### 3. Environment Setup
+
+```bash
+# Copy environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+### 4. Database Setup
+
+```bash
+# Run migrations
+php artisan migrate
+
+# Seed database with sample data
+php artisan db:seed
+```
+
+### 5. Storage Setup
+
+```bash
+# Create storage link for file uploads
+php artisan storage:link
+```
+
+### 6. Build Assets
+
+```bash
+# Build frontend assets
+npm run build
+
+# Or for development with hot reload
+npm run dev
+```
+
+### 7. Start Development Server
+
+```bash
+php artisan serve
+```
+
+Akses aplikasi di: `http://localhost:8000`
+
+## 📊 Struktur Database
+
+### Core Tables
+
+-   **users** - Data pengguna dengan role
+-   **items** - Master data produk/item
+-   **sales** - Header transaksi penjualan
+-   **sale_items** - Detail item per transaksi
+-   **payments** - Catatan pembayaran
+
+### Permission Tables (Spatie)
+
+-   **permissions** - Daftar permission
+-   **roles** - Daftar role
+-   **model_has_permissions** - Mapping user-permission
+-   **model_has_roles** - Mapping user-role
+
+## 🎯 Fitur Unggulan
+
+### 📈 Dashboard Analytics
+
+-   Filter date range dengan real-time update
+-   Widget: Total Transaksi, Total Penjualan, Item Terjual
+-   Chart: Penjualan per Bulan (Line Chart)
+-   Chart: Item Terlaris (Bar Chart)
+
+### 💰 Sistem Pembayaran Bertahap
+
+-   Support pembayaran parsial
+-   Status otomatis: "Belum Dibayar", "Belum Dibayar Sepenuhnya", "Sudah Dibayar"
+-   Validasi nominal pembayaran
+-   History pembayaran lengkap
+
+### 🛡️ Security Features
+
+-   Role-based access control
+-   CSRF protection
+-   Input validation
+-   File upload security
+
+### 📱 User Experience
+
+-   Responsive design untuk semua device
+-   Real-time updates tanpa refresh
+-   Interactive DataTables
+-   Toast notifications
+-   Loading states
+
+## 🧪 Testing
+
+### Login Credentials untuk Testing
+
+**Admin Access:**
+
+-   Email: `admin@example.com`
+-   Password: `password`
+
+**Kasir Access:**
+
+-   Email: `kasir@example.com`
+-   Password: `password`
+
+### Test Scenarios
+
+1. **Admin Flow:**
+
+    - Login sebagai admin
+    - Akses dashboard dan lihat analytics
+    - Kelola users, items, sales, dan payments
+    - Test semua CRUD operations
+
+2. **Kasir Flow:**
+    - Login sebagai kasir
+    - Redirect otomatis ke sales index
+    - Buat transaksi penjualan baru
+    - Proses pembayaran (full/partial)
+    - Verifikasi akses terbatas
+
+## 📁 Struktur Project
+
+sales-recording/
+├── app/
+│ ├── Http/
+│ │ ├── Controllers/ # HTTP Controllers (jika diperlukan)
+│ │ └── Middleware/ # Custom Middleware
+│ ├── Livewire/ # Livewire Components
+│ │ ├── Auth/ # Authentication Components
+│ │ │ └── Login.php # Login Component
+│ │ ├── Dashboard.php # Dashboard dengan Analytics
+│ │ ├── Items/ # Item Management
+│ │ │ ├── ItemCreate.php
+│ │ │ ├── ItemEdit.php
+│ │ │ ├── ItemIndex.php
+│ │ │ └── ItemShow.php
+│ │ ├── Payments/ # Payment Management
+│ │ │ ├── PaymentCreate.php
+│ │ │ ├── PaymentEdit.php
+│ │ │ ├── PaymentIndex.php
+│ │ │ └── PaymentShow.php
+│ │ ├── Sales/ # Sales Management
+│ │ │ ├── SaleCreate.php
+│ │ │ ├── SaleEdit.php
+│ │ │ ├── SaleIndex.php
+│ │ │ └── SaleShow.php
+│ │ └── Users/ # User Management
+│ │ ├── UserCreate.php
+│ │ ├── UserEdit.php
+│ │ ├── UserIndex.php
+│ │ └── UserShow.php
+│ ├── Models/ # Eloquent Models
+│ │ ├── Item.php # Item Model
+│ │ ├── Payment.php # Payment Model
+│ │ ├── Sale.php # Sale Model
+│ │ ├── SaleItem.php # Sale Item Pivot Model
+│ │ └── User.php # User Model dengan Roles
+│ ├── Observers/ # Model Observers
+│ │ └── PaymentObserver.php # Payment Status Observer
+│ └── Providers/
+│ └── AppServiceProvider.php
+├── bootstrap/
+│ ├── app.php
+│ ├── cache/
+│ └── providers.php
+├── config/
+│ ├── app.php
+│ ├── auth.php
+│ ├── database.php
+│ ├── filesystems.php
+│ ├── livewire.php
+│ ├── permission.php # Spatie Permission Config
+│ └── ...
+├── database/
+│ ├── factories/
+│ │ └── UserFactory.php
+│ ├── migrations/ # Database Migrations
+│ │ ├── 0001_01_01_000000_create_users_table.php
+│ │ ├── 2025_08_06_075347_create_permission_tables.php
+│ │ ├── 2025_08_06_075353_create_items_table.php
+│ │ ├── 2025_08_06_075354_create_sales_table.php
+│ │ ├── 2025_08_06_075355_create_sale_items_table.php
+│ │ └── 2025_08_06_075357_create_payments_table.php
+│ └── seeders/ # Database Seeders
+│ ├── DatabaseSeeder.php
+│ ├── ItemSeeder.php
+│ └── RolePermissionSeeder.php
+├── public/
+│ ├── index.php
+│ └── storage/ # Symlink untuk file uploads
+├── resources/
+│ ├── css/
+│ │ └── app.css # Tailwind CSS
+│ ├── js/
+│ │ ├── app.js
+│ │ └── bootstrap.js
+│ └── views/
+│ ├── layouts/
+│ │ └── app.blade.php # Main Layout
+│ ├── livewire/ # Livewire Blade Templates
+│ │ ├── auth/
+│ │ ├── dashboard.blade.php
+│ │ ├── items/
+│ │ ├── payments/
+│ │ ├── sales/
+│ │ └── users/
+│ └── welcome.blade.php
+├── routes/
+│ ├── console.php
+│ └── web.php # Web Routes dengan Middleware
+├── storage/
+│ ├── app/
+│ │ ├── private/
+│ │ └── public/ # File uploads (images)
+│ ├── framework/
+│ └── logs/
+├── tests/
+│ ├── Feature/
+│ └── Unit/
+├── .env.example # Environment Template
+├── composer.json # PHP Dependencies
+├── package.json # Node.js Dependencies
+├── vite.config.js # Vite Configuration
+└── README.md # Documentation
+
+## 🔧 Konfigurasi Tambahan
+
+### Database Configuration
+
+Untuk production, ubah konfigurasi database di `.env`:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sales_recording
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+```
+
+---
+
+**Developed with ❤️ by [Irfan Faiz](https://github.com/irfanfaiz25) using Laravel & Livewire**
