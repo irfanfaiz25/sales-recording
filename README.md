@@ -220,105 +220,32 @@ Akses aplikasi di: `http://localhost:8000`
 sales-recording/
 ├── app/
 │ ├── Http/
-│ │ ├── Controllers/ # HTTP Controllers (jika diperlukan)
-│ │ └── Middleware/ # Custom Middleware
-│ ├── Livewire/ # Livewire Components
-│ │ ├── Auth/ # Authentication Components
-│ │ │ └── Login.php # Login Component
-│ │ ├── Dashboard.php # Dashboard dengan Analytics
-│ │ ├── Items/ # Item Management
-│ │ │ ├── ItemCreate.php
-│ │ │ ├── ItemEdit.php
-│ │ │ ├── ItemIndex.php
-│ │ │ └── ItemShow.php
-│ │ ├── Payments/ # Payment Management
-│ │ │ ├── PaymentCreate.php
-│ │ │ ├── PaymentEdit.php
-│ │ │ ├── PaymentIndex.php
-│ │ │ └── PaymentShow.php
-│ │ ├── Sales/ # Sales Management
-│ │ │ ├── SaleCreate.php
-│ │ │ ├── SaleEdit.php
-│ │ │ ├── SaleIndex.php
-│ │ │ └── SaleShow.php
-│ │ └── Users/ # User Management
-│ │ ├── UserCreate.php
-│ │ ├── UserEdit.php
-│ │ ├── UserIndex.php
-│ │ └── UserShow.php
-│ ├── Models/ # Eloquent Models
-│ │ ├── Item.php # Item Model
-│ │ ├── Payment.php # Payment Model
-│ │ ├── Sale.php # Sale Model
-│ │ ├── SaleItem.php # Sale Item Pivot Model
-│ │ └── User.php # User Model dengan Roles
-│ ├── Observers/ # Model Observers
-│ │ └── PaymentObserver.php # Payment Status Observer
+│ │ ├── Controllers/
+│ │ └── Middleware/
+│ ├── Livewire/
+│ │ ├── Auth/
+│ │ ├── Dashboard.php
+│ │ ├── Items/
+│ │ ├── Payments/
+│ │ ├── Sales/
+│ │ └── Users/
+│ ├── Models/
+│ ├── Observers/
 │ └── Providers/
-│ └── AppServiceProvider.php
 ├── bootstrap/
-│ ├── app.php
-│ ├── cache/
-│ └── providers.php
 ├── config/
-│ ├── app.php
-│ ├── auth.php
-│ ├── database.php
-│ ├── filesystems.php
-│ ├── livewire.php
-│ ├── permission.php # Spatie Permission Config
-│ └── ...
 ├── database/
 │ ├── factories/
-│ │ └── UserFactory.php
-│ ├── migrations/ # Database Migrations
-│ │ ├── 0001_01_01_000000_create_users_table.php
-│ │ ├── 2025_08_06_075347_create_permission_tables.php
-│ │ ├── 2025_08_06_075353_create_items_table.php
-│ │ ├── 2025_08_06_075354_create_sales_table.php
-│ │ ├── 2025_08_06_075355_create_sale_items_table.php
-│ │ └── 2025_08_06_075357_create_payments_table.php
-│ └── seeders/ # Database Seeders
-│ ├── DatabaseSeeder.php
-│ ├── ItemSeeder.php
-│ └── RolePermissionSeeder.php
+│ ├── migrations/
+│ └── seeders/
 ├── public/
-│ ├── index.php
-│ └── storage/ # Symlink untuk file uploads
 ├── resources/
 │ ├── css/
-│ │ └── app.css # Tailwind CSS
 │ ├── js/
-│ │ ├── app.js
-│ │ └── bootstrap.js
 │ └── views/
-│ ├── layouts/
-│ │ └── app.blade.php # Main Layout
-│ ├── livewire/ # Livewire Blade Templates
-│ │ ├── auth/
-│ │ ├── dashboard.blade.php
-│ │ ├── items/
-│ │ ├── payments/
-│ │ ├── sales/
-│ │ └── users/
-│ └── welcome.blade.php
 ├── routes/
-│ ├── console.php
-│ └── web.php # Web Routes dengan Middleware
 ├── storage/
-│ ├── app/
-│ │ ├── private/
-│ │ └── public/ # File uploads (images)
-│ ├── framework/
-│ └── logs/
-├── tests/
-│ ├── Feature/
-│ └── Unit/
-├── .env.example # Environment Template
-├── composer.json # PHP Dependencies
-├── package.json # Node.js Dependencies
-├── vite.config.js # Vite Configuration
-└── README.md # Documentation
+└── tests/
 
 ## 🔧 Konfigurasi Tambahan
 
