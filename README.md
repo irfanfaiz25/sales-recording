@@ -1,4 +1,4 @@
-# Sales Recording System
+<h1 align="center">Sales Recording System</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Laravel-12.x-red?style=for-the-badge&logo=laravel" alt="Laravel">
@@ -52,17 +52,17 @@ Sales Recording System adalah aplikasi web berbasis Laravel yang dirancang untuk
 | --------- | ------------------------------- |
 | Dashboard | ❌ No access                    |
 | Users     | ❌ No access                    |
-| Items     | ✅ View items only              |
+| Items     | ✅ Create, Read, Update, Delete |
 | Sales     | ✅ Create, Read, Update, Delete |
 | Payments  | ✅ Create, Read, Update, Delete |
 | Reports   | ❌ No access                    |
 
 ### 👤 Default Users
 
-| Username | Email             | Password | Role  |
-| -------- | ----------------- | -------- | ----- |
-| Admin    | admin@example.com | password | Admin |
-| Kasir    | kasir@example.com | password | Kasir |
+| Username | Email           | Password   | Role  |
+| -------- | --------------- | ---------- | ----- |
+| Admin    | admin@gmail.com | rahasia123 | Admin |
+| Kasir    | kasir@gmail.com | rahasia123 | Kasir |
 
 ## 🚀 Petunjuk Instalasi
 
@@ -191,12 +191,12 @@ Akses aplikasi di: `http://localhost:8000`
 
 **Admin Access:**
 
--   Email: `admin@example.com`
+-   Email: `admin@gmail.com`
 -   Password: `rahasia123`
 
 **Kasir Access:**
 
--   Email: `kasir@example.com`
+-   Email: `kasir@gmail.com`
 -   Password: `rahasia123`
 
 ### Test Scenarios
