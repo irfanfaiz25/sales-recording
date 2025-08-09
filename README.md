@@ -1,10 +1,9 @@
 # Sales Recording System
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Laravel-11.x-red?style=for-the-badge&logo=laravel" alt="Laravel">
+  <img src="https://img.shields.io/badge/Laravel-12.x-red?style=for-the-badge&logo=laravel" alt="Laravel">
   <img src="https://img.shields.io/badge/Livewire-3.x-blue?style=for-the-badge&logo=livewire" alt="Livewire">
-  <img src="https://img.shields.io/badge/TailwindCSS-3.x-cyan?style=for-the-badge&logo=tailwindcss" alt="TailwindCSS">
-  <img src="https://img.shields.io/badge/OpenAI-GPT--4-green?style=for-the-badge&logo=openai" alt="OpenAI">
+  <img src="https://img.shields.io/badge/TailwindCSS-4.x-cyan?style=for-the-badge&logo=tailwindcss" alt="TailwindCSS">
   <img src="https://img.shields.io/badge/PHP-8.2+-purple?style=for-the-badge&logo=php" alt="PHP">
 </p>
 
