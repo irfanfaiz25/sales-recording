@@ -5,10 +5,10 @@
         <div class="relative z-10">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div class="mb-4 md:mb-0">
-                    <h1 class="text-4xl font-bold text-white mb-2 flex items-center">
+                    <h1 class="page-title text-white mb-2 flex items-center">
                         Daftar Item
                     </h1>
-                    <p class="text-purple-100 text-lg">Kelola data item untuk penjualan</p>
+                    <p class="page-subtitle">Kelola data item untuk penjualan</p>
                 </div>
                 <div class="flex space-x-4">
                     <a href="{{ route('items.create') }}"

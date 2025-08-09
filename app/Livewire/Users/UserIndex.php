@@ -10,7 +10,7 @@ class UserIndex extends Component
 {
     public function __construct()
     {
-        $this->authorize('manage-users');
+        $this->authorize('view-users');
     }
 
     public function delete($id)

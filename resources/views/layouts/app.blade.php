@@ -132,7 +132,6 @@
                                     @endif
                                 </a>
                             @endrole
-
                         </div>
                     </div>
                 </div>
@@ -175,6 +174,24 @@
 
         {{-- Main Content --}}
         <div class="flex-1 flex flex-col lg:ml-0">
+            {{-- Top Header --}}
+            <header class="bg-white shadow-sm border-b border-gray-200 lg:hidden">
+                <div class="flex items-center justify-between h-16 px-6">
+                    {{-- Mobile menu button --}}
+                    <button @click="sidebarOpen = true"
+                        class="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+
+                    {{-- Page Title --}}
+                    <div class="flex-1 flex items-center">
+                        <h2 class="text-xl font-semibold text-gray-900 ml-4">
+                            {{ $title ?? 'Dashboard' }}
+                        </h2>
+                    </div>
+                </div>
+            </header>
+
             {{-- Page Content --}}
             <main class="flex-1 overflow-y-auto bg-gray-50">
                 <div class="p-6">

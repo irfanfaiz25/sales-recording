@@ -202,9 +202,9 @@ body {
 }
 
 .page-title {
-    @apply text-3xl font-bold mb-2;
+    @apply text-xl md:text-3xl font-bold mb-2;
 }
 
 .page-subtitle {
-    @apply text-blue-100 text-lg;
+    @apply text-blue-100 text-sm md:text-lg;
 }

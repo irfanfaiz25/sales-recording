@@ -5,10 +5,10 @@
         <div class="relative z-10">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div class="mb-4 md:mb-0">
-                    <h1 class="text-4xl font-bold text-white mb-2 flex items-center">
+                    <h1 class="page-title text-white mb-2 flex items-center">
                         Daftar Penjualan
                     </h1>
-                    <p class="text-blue-100 text-lg">Kelola semua transaksi penjualan Anda</p>
+                    <p class="page-subtitle">Kelola semua transaksi penjualan Anda</p>
                 </div>
                 <div class="flex flex-col justify-center gap-2">
                     <div class="flex gap-2">

@@ -14,7 +14,7 @@ class ItemIndex extends Component
 {
     public function __construct()
     {
-        $this->authorize('manage-items');
+        $this->authorize('view-items');
     }
 
     public function delete($id)
