@@ -1,5 +1,13 @@
 # Sales Recording System
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-11.x-red?style=for-the-badge&logo=laravel" alt="Laravel">
+  <img src="https://img.shields.io/badge/Livewire-3.x-blue?style=for-the-badge&logo=livewire" alt="Livewire">
+  <img src="https://img.shields.io/badge/TailwindCSS-3.x-cyan?style=for-the-badge&logo=tailwindcss" alt="TailwindCSS">
+  <img src="https://img.shields.io/badge/OpenAI-GPT--4-green?style=for-the-badge&logo=openai" alt="OpenAI">
+  <img src="https://img.shields.io/badge/PHP-8.2+-purple?style=for-the-badge&logo=php" alt="PHP">
+</p>
+
 ## 📋 Deskripsi Sistem
 
 Sales Recording System adalah aplikasi web berbasis Laravel yang dirancang untuk mengelola pencatatan penjualan secara komprehensif. Sistem ini menyediakan dashboard analitik, manajemen transaksi penjualan, sistem pembayaran bertahap, dan manajemen data master dengan kontrol akses berbasis role.
@@ -185,12 +193,12 @@ Akses aplikasi di: `http://localhost:8000`
 **Admin Access:**
 
 -   Email: `admin@example.com`
--   Password: `password`
+-   Password: `rahasia123`
 
 **Kasir Access:**
 
 -   Email: `kasir@example.com`
--   Password: `password`
+-   Password: `rahasia123`
 
 ### Test Scenarios
 
