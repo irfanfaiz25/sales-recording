@@ -215,38 +215,6 @@ Akses aplikasi di: `http://localhost:8000`
     - Proses pembayaran (full/partial)
     - Verifikasi akses terbatas
 
-## 📁 Struktur Project
-
-sales-recording/
-├── app/
-│ ├── Http/
-│ │ ├── Controllers/
-│ │ └── Middleware/
-│ ├── Livewire/
-│ │ ├── Auth/
-│ │ ├── Dashboard.php
-│ │ ├── Items/
-│ │ ├── Payments/
-│ │ ├── Sales/
-│ │ └── Users/
-│ ├── Models/
-│ ├── Observers/
-│ └── Providers/
-├── bootstrap/
-├── config/
-├── database/
-│ ├── factories/
-│ ├── migrations/
-│ └── seeders/
-├── public/
-├── resources/
-│ ├── css/
-│ ├── js/
-│ └── views/
-├── routes/
-├── storage/
-└── tests/
-
 ## 🔧 Konfigurasi Tambahan
 
 ### Database Configuration
