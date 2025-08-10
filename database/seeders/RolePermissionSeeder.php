@@ -82,7 +82,7 @@ class RolePermissionSeeder extends Seeder
 
         // Create default kasir user
         $kasirUser = User::create([
-            'name' => 'Kasir',
+            'name' => 'Fulan',
             'email' => 'kasir@gmail.com',
             'password' => Hash::make('rahasia123'),
         ]);
