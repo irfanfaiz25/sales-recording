@@ -66,7 +66,7 @@
     <div
         class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 hover:shadow-3xl transition-all duration-300">
         <div class="table-responsive">
-            <table id="paymentsTable" class="table display responsive nowrap" style="width:100%">
+            <table id="paymentsTable" class="table" style="width:100%">
                 <thead>
                     <tr>
                         <th>Kode</th>
@@ -81,7 +81,9 @@
                     @foreach ($payments as $payment)
                         <tr>
                             <td class="font-medium">{{ $payment->code }}</td>
-                            <td>{{ $payment->payment_date->format('d/m/Y') }}</td>
+                            <td data-order="{{ $payment->payment_date->format('Y-m-d') }}">
+                                {{ $payment->payment_date->format('d/m/Y') }}
+                            </td>
                             <td>
                                 <div>
                                     <div class="font-medium">{{ $payment->sale->code }}</div>
@@ -132,7 +134,8 @@
                         responsive: true,
                         pageLength: 25,
                         order: [
-                            [1, 'desc']
+                            [1, 'desc'],
+                            [0, 'desc']
                         ],
                         destroy: true,
                         language: {
@@ -152,7 +155,7 @@
                         },
                         columnDefs: [{
                             orderable: false,
-                            targets: [5] // Disable sorting for Actions column
+                            targets: [5]
                         }]
                     });
                 } catch (error) {

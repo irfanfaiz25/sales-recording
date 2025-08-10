@@ -67,7 +67,7 @@
     <div
         class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 hover:shadow-3xl transition-all duration-300">
         <div class="table-responsive">
-            <table id="salesTable" class="table display responsive nowrap" style="width:100%">
+            <table id="salesTable" class="table" style="width:100%">
                 <thead>
                     <tr>
                         <th>Kode Penjualan</th>
@@ -85,7 +85,7 @@
                             <td>
                                 {{ $sale->code }}
                             </td>
-                            <td>
+                            <td data-order="{{ $sale->sale_date->format('Y-m-d') }}">
                                 {{ $sale->sale_date->format('d/m/Y') }}
                             </td>
                             <td>
@@ -151,7 +151,8 @@
                             responsive: true,
                             pageLength: 25,
                             order: [
-                                [1, 'desc']
+                                [1, 'desc'],
+                                [0, 'desc']
                             ],
                             destroy: true,
                             language: {
@@ -171,7 +172,7 @@
                             },
                             columnDefs: [{
                                 orderable: false,
-                                targets: [3, 6] // Disable sorting for Items and Actions columns
+                                targets: [3, 5]
                             }]
                         });
                     } catch (error) {

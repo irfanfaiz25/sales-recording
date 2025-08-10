@@ -46,7 +46,7 @@ class PaymentIndex extends Component
             ->when($this->dateEnd, function ($query) {
                 $query->whereDate('payment_date', '<=', $this->dateEnd);
             })
-            ->latest()
+            ->orderBy('payment_date', 'desc')
             ->get();
 
         return view('livewire.payments.payment-index', compact('payments'))

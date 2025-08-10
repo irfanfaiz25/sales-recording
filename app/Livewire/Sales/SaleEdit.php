@@ -269,6 +269,9 @@ class SaleEdit extends Component
                     'updated_by' => auth()->user()->id,
                 ]);
 
+                // Update remaining amount
+                $this->sale->updateRemainingAmount();
+
                 // Delete existing sale items
                 $this->sale->saleItems()->delete();
 

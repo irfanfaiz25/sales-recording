@@ -56,7 +56,7 @@ class SaleIndex extends Component
             ->when($this->dateEnd, function ($query) {
                 $query->whereDate('sale_date', '<=', $this->dateEnd);
             })
-            ->latest('sale_date')
+            ->orderBy('sale_date', 'desc')
             ->get();
 
         return view('livewire.sales.sale-index', [

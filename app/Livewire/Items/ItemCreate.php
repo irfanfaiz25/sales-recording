@@ -36,6 +36,13 @@ class ItemCreate extends Component
         $this->generateCode();
     }
 
+    public function generateCode()
+    {
+        do {
+            $this->code = 'ITM-' . str_pad(rand(1, 99999), 5, '0', STR_PAD_LEFT);
+        } while (Item::where('code', $this->code)->exists());
+    }
+
     public function save()
     {
         $this->validate();

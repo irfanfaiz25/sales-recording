@@ -87,8 +87,8 @@
                     <div class="flex justify-between pt-2 border-t">
                         <span class="text-gray-600">Status:</span>
                         <span
-                            class="px-2 py-1 text-xs font-semibold rounded-full {{ $payment->sale->status === 'paid' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
-                            {{ $payment->sale->status === 'paid' ? 'Lunas' : 'Belum Lunas' }}
+                            class="px-2 py-1 text-xs font-semibold rounded-full {{ $payment->sale->status === 'Sudah Dibayar' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
+                            {{ $payment->sale->status }}
                         </span>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                         order: [
                             [2, 'asc']
                         ],
-                        destroy: true, // Allow reinitialization
+                        destroy: true,
                         language: {
                             search: "Cari:",
                             lengthMenu: "Tampilkan _MENU_ data per halaman",

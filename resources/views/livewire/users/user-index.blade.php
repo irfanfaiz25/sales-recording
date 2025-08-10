@@ -43,7 +43,7 @@
 
     <div
         class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 hover:shadow-3xl transition-all duration-300">
-        <div class="table-responsive overflow-x-auto">
+        <div class="table-responsive">
             <table id="usersTable" class="table">
                 <thead>
                     <tr>
@@ -66,7 +66,7 @@
                             <td class="table-data capitalize">
                                 {{ $user->getRoleNames()->first() ?? '-' }}
                             </td>
-                            <td class="table-data">
+                            <td class="table-data" data-order="{{ $user->created_at->format('Y-m-d') }}">
                                 {{ $user->created_at->format('d/m/Y') }}
                             </td>
                             <td class="table-data text-center">
@@ -114,9 +114,9 @@
                         responsive: true,
                         pageLength: 25,
                         order: [
-                            [0, 'asc']
+                            [3, 'desc']
                         ],
-                        destroy: true, // Allow reinitialization
+                        destroy: true,
                         language: {
                             search: "Cari:",
                             lengthMenu: "Tampilkan _MENU_ data per halaman",
@@ -134,7 +134,7 @@
                         },
                         columnDefs: [{
                             orderable: false,
-                            targets: [4] // Disable sorting for Actions column
+                            targets: [4]
                         }]
                     });
                 } catch (error) {

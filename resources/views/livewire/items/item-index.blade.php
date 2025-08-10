@@ -51,6 +51,7 @@
                         <th>Gambar</th>
                         <th>Nama Item</th>
                         <th>Harga</th>
+                        <th style="display: none;">Tanggal Dibuat</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -75,6 +76,9 @@
                             </td>
                             <td class="font-medium text-gray-900">
                                 Rp {{ number_format($item->price, 0, ',', '.') }}
+                            </td>
+                            <td data-order="{{ $item->created_at->format('Y-m-d') }}">
+                                {{ $item->created_at->format('d/m/Y') }}
                             </td>
                             <td>
                                 <div class="flex items-center space-x-2">
@@ -124,9 +128,9 @@
                         responsive: true,
                         pageLength: 25,
                         order: [
-                            [2, 'asc']
-                        ], // Sort by name
-                        destroy: true, // Allow reinitialization
+                            [4, 'desc']
+                        ],
+                        destroy: true,
                         language: {
                             search: "Cari:",
                             lengthMenu: "Tampilkan _MENU_ data per halaman",
@@ -144,7 +148,7 @@
                         },
                         columnDefs: [{
                             orderable: false,
-                            targets: [1, 4] // Disable sorting for Image and Actions columns
+                            targets: [1, 4]
                         }]
                     });
                 } catch (error) {
