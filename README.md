@@ -42,7 +42,6 @@ Sales Recording System adalah aplikasi web berbasis Laravel yang dirancang untuk
 | Items     | ✅ Create, Read, Update, Delete    |
 | Sales     | ✅ Create, Read, Update, Delete    |
 | Payments  | ✅ Create, Read, Update, Delete    |
-| Reports   | ✅ View all reports                |
 
 ### 🏪 Kasir Role
 
@@ -55,7 +54,6 @@ Sales Recording System adalah aplikasi web berbasis Laravel yang dirancang untuk
 | Items     | ✅ Create, Read, Update, Delete |
 | Sales     | ✅ Create, Read, Update, Delete |
 | Payments  | ✅ Create, Read, Update, Delete |
-| Reports   | ❌ No access                    |
 
 ### 👤 Default Users
 

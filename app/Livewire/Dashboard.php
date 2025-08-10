@@ -14,6 +14,11 @@ class Dashboard extends Component
     public $startDate;
     public $endDate;
 
+    public function __construct()
+    {
+        $this->authorize('view-reports');
+    }
+
     public function mount()
     {
         $this->startDate = Carbon::now()->startOfMonth()->format('Y-m-d');
